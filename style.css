@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+h2 {
+  font-size: 1rem;
+}
+p {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  padding: 2rem;
+  display: block;
+  background-color: var(--Light-grayish-blue);
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* --- GRID SPAN --- */
+
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
+.quote {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.testimonial img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: auto;
+  border-radius: 100%;
+  border: 2px solid;
+  border-color: var(--Light-gray);
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.testimonial:nth-child(1) {
+  background-color: var(--Moderate-violet);
+  color: var(--Light-grayish-blue);
+
+  p {
+    color: var(--Light-gray);
+  }
+}
+
+.testimonial:nth-child(2) {
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--Light-grayish-blue);
+
+  p {
+    color: var(--Light-gray);
+  }
+}
+
+.testimonial:nth-child(3) {
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+
+  p {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 0.8;
+  }
+}
+
+.testimonial:nth-child(4) {
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--Light-grayish-blue);
+
+  p {
+    color: var(--Light-gray);
+  }
+}
+
+.testimonial:nth-child(5) {
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+
+  p {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 0.8;
+  }
+
+  /* THIS WAS RLLY HARD TO MAKE SENSE */
+
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* TBF I'VE GOT BORED AND I HAVE TO DO MY DUOLINGO LESSONS  */
+
+@media only screen and (max-width: 1000px) {
+  .testimonial-grid {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .testimonial-grid {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100%;
+  }
+}
